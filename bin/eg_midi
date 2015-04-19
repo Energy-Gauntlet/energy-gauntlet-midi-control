@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/eg_midi'
+
+EGMidi.run(
+  socket_url: 'ws://energy-gauntlet.mybluemix.net/ws/raw',
+  logging:     true
+)
