@@ -16,6 +16,12 @@ module EGMidi
       if raw['connected'] == false
         []
       else
+        x = normalize 'x', raw
+        y = normalize 'y', raw
+
+        @messager1.octave = 8 - (x * 8).round
+        @messager2.octave = 8 - (x * 8).round
+
         if raw['button_0'] == 1
           f0 = normalize 'flex_0', raw
 

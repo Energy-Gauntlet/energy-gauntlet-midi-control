@@ -17,6 +17,14 @@ module EGMidi
       'flex_1' => {
         high: 2100,
         low:  1200
+      },
+      'x' => {
+        high: 2800,
+        low:  1600
+      },
+      'y' => {
+        high: 3000,
+        low:  1200
       }
     })
     ws = Socket.new(config[:socket_url]) do |raw|

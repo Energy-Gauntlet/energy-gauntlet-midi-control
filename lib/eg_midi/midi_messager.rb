@@ -11,6 +11,8 @@ module EGMidi
 
     @@inverted_midi = {}
 
+    attr_accessor :octave, :key
+
     def initialize config = {}
       @octave = config[:octave] || 5
       @key    = config[:key]    || :c
